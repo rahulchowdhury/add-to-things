@@ -35,10 +35,16 @@
             android:textStyle="bold" />
 
         <EditText
+            android:id="@+id/todoTask"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/white"
-            android:hint="@string/todo_task_placeholder" />
+            android:hint="@string/todo_task_placeholder"
+            android:inputType="textCapSentences">
+
+            <requestFocus />
+
+        </EditText>
 
         <View
             android:layout_width="match_parent"
@@ -56,16 +62,19 @@
             android:textStyle="bold" />
 
         <EditText
+            android:id="@+id/todoNote"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/white"
             android:gravity="top"
             android:hint="@string/todo_note_placeholder"
+            android:inputType="textMultiLine"
             android:lines="3" />
 
     </LinearLayout>
 
     <Button
+        android:id="@+id/addTodoButton"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
@@ -75,5 +84,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/todoDetailsLayout" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

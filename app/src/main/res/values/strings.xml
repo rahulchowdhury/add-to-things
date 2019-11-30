@@ -8,4 +8,7 @@
     <string name="todo_note_placeholder">Here are some details&#8230;</string>
 
     <string name="todo_button_text">Add to Things</string>
+
+    <string name="message_todo_added">Added todo to Things</string>
+    <string name="message_todo_not_added">Unable to add todo to Things</string>
 </resources>

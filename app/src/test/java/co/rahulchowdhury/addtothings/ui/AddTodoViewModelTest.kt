@@ -44,8 +44,8 @@ class AddTodoViewModelTest : ViewModelTest() {
             note = sampleTodo.note
         )
 
-        val addTaskState = getValue(addTodoViewModel.addTaskState)
-        assertThat(addTaskState).isEqualTo(Added)
+        val addTodoState = getValue(addTodoViewModel.addTodoState)
+        assertThat(addTodoState).isEqualTo(Added)
 
         verify(thingsRepository).addToThings(sampleTodo)
 
@@ -64,11 +64,11 @@ class AddTodoViewModelTest : ViewModelTest() {
             note = sampleTodo.note
         )
 
-        assertThat(getValue(addTodoViewModel.addTaskState)).isEqualTo(Adding)
+        assertThat(getValue(addTodoViewModel.addTodoState)).isEqualTo(Adding)
 
         mainCoroutineRule.resumeDispatcher()
 
-        assertThat(getValue(addTodoViewModel.addTaskState)).isEqualTo(Added)
+        assertThat(getValue(addTodoViewModel.addTodoState)).isEqualTo(Added)
     }
 
     @Test
@@ -80,8 +80,8 @@ class AddTodoViewModelTest : ViewModelTest() {
             note = sampleTodo.note
         )
 
-        val addTaskState = getValue(addTodoViewModel.addTaskState)
-        assertThat(addTaskState).isEqualTo(UnableToAdd)
+        val addTodoState = getValue(addTodoViewModel.addTodoState)
+        assertThat(addTodoState).isEqualTo(UnableToAdd)
 
         verify(thingsRepository).addToThings(sampleTodo)
 

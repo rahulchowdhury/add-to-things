@@ -1,11 +1,12 @@
 # Add to Things
+![Things logo]()
 A tiny companion app on Android for adding tasks to Things, since Things is Apple ecosystem only.
 
 # How to build?
 You can clone this project and build it with your personalised Things email address.
 
 ## Get a Mailgun API key
-The first step is to get your own Mailgun API key. This will be used for sending emails to your personalised Things email (for adding tasks).
+The first step is to get your own [Mailgun](https://www.mailgun.com/) API key. This will be used for sending emails to your personalised Things email (for adding tasks).
 
 ## Create local properties file
 The next step is creating a local properties file at the root of this project, called `appconfig.properties` with the following content:

@@ -1,8 +1,9 @@
 package co.rahulchowdhury.addtothings.data.source.remote
 
+import co.rahulchowdhury.addtothings.data.model.Todo
+
 interface ThingsEmailSource {
     suspend fun emailToThings(
-        task: String,
-        note: String
+        todo: Todo
     )
 }

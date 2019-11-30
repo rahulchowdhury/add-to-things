@@ -1,8 +1,9 @@
 package co.rahulchowdhury.addtothings.data.repo
 
+import co.rahulchowdhury.addtothings.data.model.Todo
+
 interface ThingsRepository {
     suspend fun addToThings(
-        task: String,
-        note: String
+        todo: Todo
     )
 }

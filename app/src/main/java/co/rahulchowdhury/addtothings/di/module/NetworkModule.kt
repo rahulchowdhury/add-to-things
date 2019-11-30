@@ -54,7 +54,7 @@ fun provideRetrofit(
     Retrofit.Builder()
         .client(okHttpClient)
         .addConverterFactory(GsonConverterFactory.create())
-        .baseUrl("https://api.mailgun.net/v3/${BuildConfig.MAILGUN_DOMAIN}")
+        .baseUrl("https://api.mailgun.net/v3/${BuildConfig.MAILGUN_DOMAIN}/")
         .build()
 
 fun provideMailgunApiService(

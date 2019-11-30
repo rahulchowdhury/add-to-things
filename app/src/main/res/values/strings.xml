@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Add to Things</string>
+
+    <string name="todo_task_field_name">Task</string>
+    <string name="todo_task_placeholder">I want to&#8230;</string>
+
+    <string name="todo_note_field_name">Notes</string>
+    <string name="todo_note_placeholder">Here are some details&#8230;</string>
+
+    <string name="todo_button_text">Add to Things</string>
 </resources>

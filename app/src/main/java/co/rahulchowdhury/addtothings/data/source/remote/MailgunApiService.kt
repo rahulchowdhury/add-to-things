@@ -5,7 +5,7 @@ import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
 
 interface MailgunApiService {
-    @POST("/messages")
+    @POST("messages")
     @FormUrlEncoded
     suspend fun sendEmail(
         @Field("from") from: String,

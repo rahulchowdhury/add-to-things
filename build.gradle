@@ -26,3 +26,15 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    lifecycleVersion = "2.0.0"
+    navigationVersion = "2.0.0"
+    ktxVersion = "1.0.2"
+    retrofitVersion = "2.6.0"
+    koinVersion = "2.0.1"
+    roomVersion = "2.1.0"
+    truthVersion = "0.44"
+    coroutinesVersion = "1.2.1"
+    mockitoVersion = "3.0.0"
+}

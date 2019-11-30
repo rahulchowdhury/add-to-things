@@ -21,6 +21,7 @@ android {
         buildConfigField("String", "EMAIL_FROM_ADDRESS", appConfigProperties['FROM_ADDRESS'])
         buildConfigField("String", "EMAIL_TO_ADDRESS", appConfigProperties['TO_ADDRESS'])
         buildConfigField("String", "MAILGUN_API_KEY", appConfigProperties['MAILGUN_API_KEY'])
+        buildConfigField("String", "MAILGUN_DOMAIN", appConfigProperties['MAILGUN_DOMAIN'])
     }
     buildTypes {
         release {

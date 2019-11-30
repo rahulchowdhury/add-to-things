@@ -1,6 +1,7 @@
 package co.rahulchowdhury.addtothings.util
 
 import android.content.Context
+import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 import androidx.core.content.ContextCompat
@@ -37,4 +38,12 @@ fun Fragment.hideKeyboard() {
                     as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(view!!.windowToken, 0)
     }
+}
+
+fun View.show() {
+    visibility = View.VISIBLE
+}
+
+fun View.makeInvisible() {
+    visibility = View.INVISIBLE
 }

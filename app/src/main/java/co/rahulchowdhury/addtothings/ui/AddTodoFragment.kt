@@ -12,6 +12,8 @@ import co.rahulchowdhury.addtothings.ui.state.Added
 import co.rahulchowdhury.addtothings.ui.state.Adding
 import co.rahulchowdhury.addtothings.ui.state.UnableToAdd
 import co.rahulchowdhury.addtothings.util.hideKeyboard
+import co.rahulchowdhury.addtothings.util.makeInvisible
+import co.rahulchowdhury.addtothings.util.show
 import co.rahulchowdhury.addtothings.util.showSnackbar
 import kotlinx.android.synthetic.main.fragment_add_todo.*
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -49,16 +51,23 @@ class AddTodoFragment : Fragment() {
         when (addTodoState) {
             is Adding -> {
                 hideKeyboard()
+
+                addTodoButton.makeInvisible()
+                loading.show()
             }
             is Added -> {
+                loading.makeInvisible()
                 todoTask.text.clear()
                 todoNote.text.clear()
 
+                addTodoButton.show()
                 todoTask.requestFocus()
 
                 showSnackbar(R.string.message_todo_added)
             }
             is UnableToAdd -> {
+                loading.makeInvisible()
+                addTodoButton.show()
                 showSnackbar(R.string.message_todo_not_added)
             }
         }

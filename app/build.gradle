@@ -19,6 +19,8 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "EMAIL_FROM_ADDRESS", appConfigProperties['FROM_ADDRESS'])
+        buildConfigField("String", "EMAIL_TO_ADDRESS", appConfigProperties['TO_ADDRESS'])
+        buildConfigField("String", "MAILGUN_API_KEY", appConfigProperties['MAILGUN_API_KEY'])
     }
     buildTypes {
         release {

@@ -1,5 +1,5 @@
 # Add to Things
-![Things logo]()
+![Things logo](https://github.com/rahulchowdhury/add-to-things/blob/master/things-logo.png)
 A tiny companion app on Android for adding tasks to Things, since Things is Apple ecosystem only.
 
 # How to build?

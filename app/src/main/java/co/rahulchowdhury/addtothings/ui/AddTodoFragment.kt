@@ -11,15 +11,12 @@ import co.rahulchowdhury.addtothings.ui.state.AddTodoState
 import co.rahulchowdhury.addtothings.ui.state.Added
 import co.rahulchowdhury.addtothings.ui.state.Adding
 import co.rahulchowdhury.addtothings.ui.state.UnableToAdd
-import co.rahulchowdhury.addtothings.util.hideKeyboard
-import co.rahulchowdhury.addtothings.util.makeInvisible
-import co.rahulchowdhury.addtothings.util.show
-import co.rahulchowdhury.addtothings.util.showSnackbar
+import co.rahulchowdhury.addtothings.util.*
 import kotlinx.android.synthetic.main.fragment_add_todo.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class AddTodoFragment : Fragment() {
-    val addTodoViewModel: AddTodoViewModel by viewModel()
+    private val addTodoViewModel: AddTodoViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater,

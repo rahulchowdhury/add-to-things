@@ -87,4 +87,35 @@ class AddTodoViewModelTest : ViewModelTest() {
 
         verifyNoMoreInteractions(thingsRepository)
     }
+
+    @Test
+    fun `should set UnableToAdd state when task is empty`() = runBlocking {
+        addTodoViewModel.addTodo(
+            task = "",
+            note = sampleTodo.note
+        )
+
+        val addTodoState = getValue(addTodoViewModel.addTodoState)
+        assertThat(addTodoState).isEqualTo(UnableToAdd)
+
+        verifyNoMoreInteractions(thingsRepository)
+    }
+
+    @Test
+    fun `should set "No Note" when note is empty`() = runBlocking {
+        val noNoteTodo = sampleTodo.copy(note = "No note")
+        `when`(thingsRepository.addToThings(noNoteTodo)).thenReturn(Unit)
+
+        addTodoViewModel.addTodo(
+            task = sampleTodo.task,
+            note = ""
+        )
+
+        val addTodoState = getValue(addTodoViewModel.addTodoState)
+        assertThat(addTodoState).isEqualTo(Added)
+
+        verify(thingsRepository).addToThings(noNoteTodo)
+
+        verifyNoMoreInteractions(thingsRepository)
+    }
 }

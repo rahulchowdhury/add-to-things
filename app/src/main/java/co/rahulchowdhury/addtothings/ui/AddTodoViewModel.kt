@@ -22,11 +22,20 @@ class AddTodoViewModel(
         task: String,
         note: String
     ) {
+        if (task.isEmpty()) {
+            _addTodoState.value = UnableToAdd
+            return
+        }
+
         _addTodoState.value = Adding
 
         viewModelScope.launch {
             try {
-                val todo = Todo(task, note)
+                val todo = if (note.isEmpty()) {
+                    Todo(task, "No note")
+                } else {
+                    Todo(task, note)
+                }
                 thingsRepository.addToThings(todo)
 
                 _addTodoState.value = Added
